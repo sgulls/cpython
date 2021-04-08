@@ -25,7 +25,7 @@ class BuildExtTestCase(support.TempdirManager,
     def setUp(self):
         super(BuildExtTestCase, self).setUp()
         self.tmp_dir = self.mkdtemp()
-        self.xx_created = False
+        self.xx_createtargetd = False
         sys.path.append(self.tmp_dir)
         self.addCleanup(sys.path.remove, self.tmp_dir)
         if sys.version > "2.6":
@@ -491,7 +491,7 @@ class BuildExtTestCase(support.TempdirManager,
         # format the target value as defined in the Apple
         # Availability Macros.  We can't use the macro names since
         # at least one value we test with will not exist yet.
-        if target[1] < 10:
+        if target[:2] < (10, 10):
             # for 10.1 through 10.9.x -> "10n0"
             target = '%02d%01d0' % target
         else:

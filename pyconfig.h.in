@@ -547,6 +547,9 @@
 /* Define to 1 if you have the <poll.h> header file. */
 #undef HAVE_POLL_H
 
+/* Define if you have the '_dyld_shared_cache_contains_path' function. */
+#undef HAVE_DYLD_SHARED_CACHE_CONTAINS_PATH
+
 /* Define to 1 if you have the <process.h> header file. */
 #undef HAVE_PROCESS_H
 
@@ -1313,4 +1316,3 @@
 #endif
 
 #endif /*Py_PYCONFIG_H*/
-
